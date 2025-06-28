@@ -1,0 +1,361 @@
+/* Global reset and box-sizing for consistency */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F1EFEC;
+  line-height: 1.6;
+}
+
+/* Scroll progress bar */
+.scroll-watcher {
+  height: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: lime;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear infinite;
+  animation-timeline: scroll();
+}
+
+/* Background image */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/glassfactory.jpg');
+  background-size: cover;
+  background-position: center;
+  transform: scale(3);
+  transition: transform 0.8s ease;
+  z-index: 1;
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-top: 30vh;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px #000;
+  text-align: center;
+}
+
+/* Header section with logo and animated intro text */
+header {
+  background: #123458;
+  color: #F1EFEC;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 24px;
+  opacity: 0;
+  transform: translateY(50px);
+  view-timeline-name: --scroll-anim;
+  view-timeline-axis: block;
+  animation: fadeSlide 1s linear forwards;
+  animation-timeline: --scroll-anim;
+  animation-range: entry 0% cover 50%;
+}
+
+.line2 {
+  width: 100%;
+  height: 2px;
+  background-color: #030303;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view(250px 500px);
+}
+
+/* Sticky navigation bar */
+nav {
+  position: sticky;
+  top: 0;
+  background: #123458;
+  color: #F1EFEC;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Show nav when body has 'scrolled' class */
+body.scrolled nav {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 250ms ease;
+  transition-delay: 250ms;
+}
+
+nav a:hover {
+  color: #D4C9BE;
+}
+
+/* Page content container */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  flex: 1;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #F1EFEC;
+  border-radius: 15px;
+}
+
+.content .photo img,
+.content .photo2 img {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  margin-right: 20px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content .photo2 img {
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view(150px 500px);
+}
+
+.content .line {
+  width: 100%;
+  height: 2px;
+  background-color: #030303;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view(60px 50px);
+}
+
+.table-section table {
+  width: 100%;
+  border: 3.5px solid #123458;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #F1EFEC;
+}
+
+.table-section th,
+.table-section td {
+  border: 2px solid #030303;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #D4C9BE;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.table-section td:hover {
+  transform: scale(1.05);
+  background-color: #F1EFEC;
+}
+
+.table-section th:hover {
+  background-color: #F1EFEC;
+  transform: scale(1);
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+section p,
+li {
+  color: #333;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #D4C9BE;
+  border: 2px solid #123458;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #F1EFEC;
+}
+
+.card p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.card p.show {
+  max-height: 500px;
+  opacity: 1;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Contact form */
+.contact-form {
+  background: #D4C9BE;
+  border: 3px solid #123458;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Fixed bottom box */
+.fixed-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #123458;
+  color: #F1EFEC;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+/* Footer */
+footer {
+  background-color: #123458;
+  color: #F1EFEC;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 2px solid #D4C9BE;
+}
+
+/* Project images fade in on scroll */
+.pro-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view(150px 500px);
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+/* Zoom out context */
+#zoom-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#target {
+  max-width: 100%;
+  transform: scale(3);
+  transition: transform 0.8s ease;
+}

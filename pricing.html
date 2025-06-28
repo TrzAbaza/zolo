@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing</title>
+  <link rel="stylesheet" href="style-other.css">
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <img src="images/logogss23.png" alt="Logo" class="logo" style="width: 100px; height: 100px;">
+    </div>
+    <div class="headline">
+      <h2><b>Abaza Glass</b></h2>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">
+      <img src="images/home.png" alt="home" style="width: 15px; height: 15px;"> Home
+    </a>
+    <a href="pricing.html">
+      <img src="images/dollar.png" alt="pricing" style="width: 15px; height: 15px;"> Pricing
+    </a>
+    <a href="joinus.html">
+      <img src="images/google-forms.png" alt="join" style="width: 15px; height: 15px;"> Join us
+    </a>
+    <a href="aboutus.html">
+      <img src="images/information-button.png" alt="About us" style="width: 15px; height: 15px;"> About us
+    </a>
+    <a href="whomadeit.html">
+      <img src="images/user.png" alt="who made it" style="width: 15px; height: 15px;"> Who Made it
+    </a>
+  </nav>
+
+  <div class="main-container">
+    <section class="content">
+      <h2>
+        <img src="images/dollar.png" alt="pricing" style="width: 15px; height: 15px;"> <b>Pricing</b>
+      </h2>
+      <h4>
+        <img src="images/triangle-warning.png" alt="warning" style="width: 25px; height: 25px;">
+        <b>Please note that these prices are for 2025 only. Prices may change later.</b>
+      </h4>
+
+      <div class="line"></div>
+
+      <div class="pricing-container">
+        <form id="glassForm" class="pricing">
+          <label for="width">Width (cm):</label>
+          <input type="number" id="width" required>
+
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" required>
+
+          <label for="type">Glass Type:</label>
+          <select id="type" required>
+            <option value="clear">Clear Glass (50 EGP/m²)</option>
+            <option value="tempered">Tempered Glass (80 EGP/m²)</option>
+            <option value="laminated">Laminated Glass (100 EGP/m²)</option>
+            <option value="frosted">Frosted Glass (90 EGP/m²)</option>
+            <option value="tinted">Tinted Glass (95 EGP/m²)</option>
+            <option value="double">Double-Glazed Glass (120 EGP/m²)</option>
+            <option value="lowe">Low-E Glass (140 EGP/m²)</option>
+          </select>
+
+          <button type="button" onclick="calculatePrice()">Calculate</button>
+        </form>
+
+        <div id="result">Total Price: 0.00 EGP</div>
+      </div>
+    </section>
+
+    <div class="fixed-box">Powered by ©Abaza Groups</div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      all copy rights to 
+      <a href="whomadeit.html" style="color: white;"><b>Mazen Abaza</b></a> &copy; 2025
+    </p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>

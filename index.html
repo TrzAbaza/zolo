@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll progress bar element -->
+  <div class="scroll-watcher"></div>
+
+  <!-- Page header with logo and animated text -->
+  <header id="header">
+    <div>
+      <img src="images/logogss23.png" alt="Logo" class="logo" style="width: 100px; height: 100px;">
+    </div>
+    <div class="headline">
+      <h2><b>Abaza Glass</b></h2>
+    </div>
+  </header>
+
+  <!-- Sticky navigation bar -->
+  <nav id="navbar">
+    <a href="index.html">
+      <img src="images/home.png" alt="home" style="width: 15px; height: 15px;"> Home
+    </a>
+    <a href="pricing.html">
+      <img src="images/dollar.png" alt="pricing" style="width: 15px; height: 15px;"> Pricing
+    </a>
+    <a href="joinus.html">
+      <img src="images/google-forms.png" alt="join" style="width: 15px; height: 15px;"> Join us
+    </a>
+    <a href="aboutus.html">
+      <img src="images/information-button.png" alt="About us" style="width: 15px; height: 15px;"> About us
+    </a>
+    <a href="whomadeit.html">
+      <img src="images/user.png" alt="who made it" style="width: 15px; height: 15px;"> Who Made it
+    </a>
+  </nav>
+
+  <!-- Main content container -->
+  <div class="main-container">
+    <section class="content">
+      <h2 style="text-align: center;"><b>Welcome to Abaza Glass !!</b></h2>
+      <div class="line"></div>
+
+      <div id="zoom-section">
+        <div class="background"></div>
+        <div class="overlay-text">
+          <h2 style="color: white;">Abaza Glass</h2>
+          <p style="color: white;">
+            <b>Abaza Glass</b> is a modern glass solutions company committed to delivering
+            high-quality, custom glass work for residential, commercial, and architectural projects.
+            With a focus on innovation, durability, and design, we specialize in everything from frameless partitions
+            and glass facades to safety glass, skylights, and decorative installations. At Abaza Glass, we combine
+            craftsmanship with cutting-edge techniques to bring elegance, clarity, and functionality to every space.
+            Whether you're building, renovating, or designing, we're here to make your vision crystal clear.
+          </p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <h2>
+        <img src="images/list.png" alt="list" style="width: 20px; height: 20px;"> What Makes Us Different
+      </h2>
+      <ul>
+        <li>🔨 Over 24 years of experience in the glass fabrication and installation industry.</li>
+        <li>🪟 Experts in modern window designs, glass facades, and customized solutions.</li>
+        <li>🎯 Focused on precision, safety, and architectural beauty in every project.</li>
+        <li>👨‍🔧 A team of certified engineers, designers, and skilled technicians.</li>
+        <li>📐 Tailored solutions for residential, commercial, and industrial spaces.</li>
+        <li>♻️ Committed to using sustainable materials and eco-friendly practices.</li>
+        <li>📍 Operating across Egypt with timely delivery and full after-sales support.</li>
+        <li>💡 Dedicated to turning your ideas into crystal-clear reality.</li>
+      </ul>
+
+      <div class="line"></div>
+
+      <div class="table-section">
+        <h2>
+          <img src="images/archery.png" alt="goals" style="width: 20px; height: 20px;"> Our Goals
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Goal</th>
+              <th>Description</th>
+              <th>Target Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Customer Satisfaction</td>
+              <td>Provide top-quality glass and excellent service to every customer.</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Innovation</td>
+              <td>Develop and offer smart and eco-friendly glass solutions.</td>
+              <td>2026</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Expansion</td>
+              <td>Expand our operations to cover all regions in Egypt.</td>
+              <td>2027</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Sustainability</td>
+              <td>Reduce glass waste by 40% through recycling and efficient manufacturing.</td>
+              <td>2028</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="projects">
+        <h2>
+          <img src="images/box.png" alt="products" style="width: 20px; height: 20px;"> Our Products
+        </h2>
+
+        <div class="card">
+          <h3>Clear Glass</h3>
+          <p>A transparent, colorless glass widely used in windows, doors, and other architectural applications.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Tempered Glass</h3>
+          <p>A type of glass that has been treated to increase its strength and safety compared to standard annealed glass.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Laminated Glass</h3>
+          <p>Constructed of two plies of glass which are bonded together with interlayers to form a permanent bond.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Frosted Glass</h3>
+          <p>Produced by the sandblasting or acid etching of clear sheet glass.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Tinted Glass</h3>
+          <p>Produced by adding metal oxides to the glass during manufacturing.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Double-Glazed Glass</h3>
+          <p>Consists of two panes of glass with a sealed space between them, usually filled with air or a gas like argon.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+
+        <div class="card">
+          <h3>Low-E Glass</h3>
+          <p>A type of energy-efficient glass that has a thin, transparent coating.</p>
+          <button onclick="toggleDetails(this)">Show Details</button>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="contact-form">
+        <h2>
+          <img src="images/contact-mail.png" alt="contact" style="width: 20px; height: 20px;"> Contact us
+        </h2>
+        <form class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-row">
+            <select>
+              <option>Question</option>
+              <option>Job</option>
+              <option>Products</option>
+            </select>
+            <input type="text" placeholder="Subject" required>
+          </div>
+          <textarea rows="5" placeholder="Your message..."></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </section>
+
+    <div class="fixed-box">Powered by ©Abaza Groups</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>all copy rights to <a href="whomadeit.html" style="color: white;"><b>Mazen Abaza</b></a> &copy; 2025</p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>

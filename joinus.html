@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>join us</title>
+  <link rel="stylesheet" href="style-other.css">
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <img src="images/logogss23.png" alt="Logo" class="logo" style="width: 100px; height: 100px;">
+    </div>
+    <div class="headline">
+      <h2><b>Abaza Glass</b></h2>
+    </div>
+  </header>
+
+  <nav class="nav">
+   <a href="index.html">
+      <img src="images/home.png" alt="home" style="width: 15px; height: 15px;"> Home
+    </a>
+    <a href="pricing.html">
+      <img src="images/dollar.png" alt="pricing" style="width: 15px; height: 15px;"> Pricing
+    </a>
+    <a href="joinus.html">
+      <img src="images/google-forms.png" alt="join" style="width: 15px; height: 15px;"> Join us
+    </a>
+    <a href="aboutus.html">
+      <img src="images/information-button.png" alt="About us" style="width: 15px; height: 15px;"> About us
+    </a>
+    <a href="whomadeit.html">
+      <img src="images/user.png" alt="who made it" style="width: 15px; height: 15px;"> Who Made it
+    </a>
+  </nav>
+
+  <div class="main-container">
+    <section class="content">
+      <h2>
+        <img src="images/google-forms.png" alt="join" style="width: 15px; height: 15px;"> <b>To Join us</b>
+      </h2>
+      <h3>Please fill out the form below .</h3>
+      <div class="line"></div>
+
+      <div class="form-container">
+        <h2>
+          <img src="images/google-forms.png" alt="Form" style="width: 15px; height: 15px;"> Full Registration Form
+        </h2>
+        <form id="fullForm">
+          <label for="name">
+            <img src="images/id-card-clip-alt.png" alt="Name" style="width: 15px; height: 15px;"> Full Name
+          </label>
+          <input type="text" id="name" required placeholder="Enter your name">
+
+          <label for="email">
+            <img src="images/envelope.png" alt="Email" style="width: 15px; height: 15px;"> Email
+          </label>
+          <input type="email" id="email" required placeholder="Enter your email">
+
+          <label for="phone">
+            <img src="images/phone-call.png" alt="Phone" style="width: 15px; height: 15px;"> Phone
+          </label>
+          <input type="tel" id="phone" placeholder="Enter your phone number">
+
+          <label>
+            <img src="images/couple.png" alt="Gender" style="width: 15px; height: 15px;"> Gender
+          </label>
+          <div class="gender-group">
+            <label>
+              <input type="radio" name="gender" value="Male" required>
+              <img src="images/male.png" alt="Male" style="width: 15px; height: 15px;"> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Female">
+              <img src="images/female.png" alt="Female" style="width: 15px; height: 15px;"> Female
+            </label>
+          </div>
+
+          <label for="role">
+            <img src="images/dice-d6.png" alt="Role" style="width: 15px; height: 15px;"> Job Role
+          </label>
+          <select id="role">
+            <option>Glass Technician / Installer</option>
+            <option>Glass Fabrication Worker</option>
+            <option>Glass Designer / Draftsman</option>
+            <option>Project Supervisor / Site Engineer</option>
+            <option>Sales or Customer Service Representative</option>
+            <option>Other</option>
+          </select>
+
+          <label for="bio">
+            <img src="images/information-button.png" alt="Bio" style="width: 15px; height: 15px;"> Short Bio
+          </label>
+          <textarea id="bio" placeholder="Tell us something about you..."></textarea>
+
+          <label>
+            <img src="images/user-skill-gear.png" alt="Skills" style="width: 15px; height: 15px;"> Skills
+          </label>
+          <div id="skillsList">
+            <div class="skill-group">
+              <input type="text" name="skill" placeholder="Enter a skill">
+              <button type="button" onclick="removeSkill(this)">Remove</button>
+            </div>
+          </div>
+
+          <button type="button" class="add-skill" onclick="addSkill()">+ Add Another Skill</button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="result">
+          <h3>Submitted Skills:</h3>
+          <ol id="output"></ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed-box">Powered by ©Abaza Groups</div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      all copy rights to 
+      <a href="whomadeit.html" style="color: white;"><b>Mazen Abaza</b></a> &copy; 2025
+    </p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>
